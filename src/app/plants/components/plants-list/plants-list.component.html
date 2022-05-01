@@ -1,19 +1,20 @@
 <table class="table">
-    <thead class="table-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre común</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Clima</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let plant of plants">
-        <th scope="row">{{ plant.id }}</th>
-        <td>{{ plant.nombre_comun }}</td>
-        <td>{{ plant.tipo }}</td>
-        <td>{{ plant.clima }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre común</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Clima</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let plant of plants">
+      <th scope="row">{{ plant.id }}</th>
+      <td>{{ plant.nombre_comun }}</td>
+      <td>{{ plant.tipo }}</td>
+      <td>{{ plant.clima }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<app-plants-type-count *ngIf="plants" [plants]="plants"></app-plants-type-count>
